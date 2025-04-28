@@ -19,14 +19,16 @@ const Signup = () => {
     }
 
     try {
-      await axios.post("http://localhost:8081/signup", {
-        name,
+      await axios.post("http://localhost:8081/api/auth/signup", {
+        username:name,
         email,
         password,
       });
+
       navigate("/login");
     } catch (err) {
       setError("Signup failed");
+      console.error(err);
     }
   };
 
@@ -71,6 +73,11 @@ const Signup = () => {
           Already have an account?{" "}
           <a href="/login" className="text-blue-600 hover:underline">
             Login here
+          </a>
+        </p>
+        <p className="text-sm text-center text-gray-500 mt-4">
+          <a href="/" className="text-blue-600 hover:underline">
+            Back to Home
           </a>
         </p>
       </div>

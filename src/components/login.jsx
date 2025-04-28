@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -18,14 +19,16 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:8081/login", {
+      const response = await axios.post("http://localhost:8081/api/auth/login", {
         email,
         password,
       });
-
+      console.log(response.data);
       if (response.data.token) {
         localStorage.setItem("token", response.data.token);
-        navigate("/dashboard");
+        toast.success("Login successful! "+response.data?.user.username+"");
+
+        navigate("/");
       }
     } catch (err) {
       setError("Invalid email or password");
@@ -64,6 +67,12 @@ const Login = () => {
           Don't have an account?{" "}
           <a href="/signup" className="text-blue-600 hover:underline">
             Sign up
+          </a>
+        </p>
+
+        <p className="text-sm text-center text-gray-500 mt-4">
+          <a href="/" className="text-blue-600 hover:underline">
+            Back to Home
           </a>
         </p>
       </div>
