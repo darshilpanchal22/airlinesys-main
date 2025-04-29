@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
+const { protect } = require('./middlewares/authMiddleware');
 
 // Load env variables
 dotenv.config();
@@ -18,6 +19,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/booking', protect, require('./routes/bookingRoutes'));
 
 // Default route
 app.get('/', (req, res) => {
