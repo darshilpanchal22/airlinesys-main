@@ -1,6 +1,4 @@
-
 const nodemailer = require('nodemailer');
-
 // 1. Setup transporter
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
@@ -11,7 +9,6 @@ const transporter = nodemailer.createTransport({
     pass: 'jzwhiomczlsddbxj',
   },
 });
-
 // 2. Verify SMTP Connection
 transporter.verify(function (error, success) {
   if (error) {
@@ -20,7 +17,6 @@ transporter.verify(function (error, success) {
     console.log('SMTP server is ready to send emails.');
   }
 });
-
 // 3. Send Email Function
 const sendEmail = async (to, subject, text, html, attachments = []) => {
   try {
@@ -32,15 +28,12 @@ const sendEmail = async (to, subject, text, html, attachments = []) => {
       html: html,
       attachments: attachments,
     });
-
     console.log('Message sent: %s', info.messageId);
   } catch (error) {
     console.error('Error sending email:', error);
   }
 };
-
 // 4. Example usage
-
 sendEmail(
   'user@example.com', // Recipient
   'Booking Confirmed - Airline Reservation', // Subject

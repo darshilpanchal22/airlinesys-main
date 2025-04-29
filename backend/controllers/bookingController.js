@@ -39,7 +39,7 @@ exports.booking = async (req, res) => {
     });
     await booking.save();
     // Send Email
-    sendEmail(req.user.email, )
+    sendEmail(req.user.email, "Booking Successful", "Your ticket booked successfully", null)
 
     res.status(201).json(booking);
   } catch (error) {
