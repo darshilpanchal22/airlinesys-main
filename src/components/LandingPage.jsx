@@ -130,16 +130,23 @@ const LandingPage = () => {
             <h2 className="text-4xl font-semibold mb-8 text-blue-800">
               Explore Top Destinations
             </h2>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               <div className="rounded-lg overflow-hidden shadow-lg">
+                <a href="https://exploreparis.com/en" 
+                target="_blank">
                 <img
                   src="https://travelingwolf.com/assets/images/format2x3/paris-photo-spots.jpg"
                   alt="Paris"
                   className="w-full h-48 object-cover"
                 />
                 <p className="text-lg font-semibold p-4 text-gray-800">Paris</p>
+                </a>
               </div>
+
               <div className="rounded-lg overflow-hidden shadow-lg">
+                <a href="https://www.iloveny.com/"
+                 target="_blank">
                 <img
                   src="https://images.unsplash.com/photo-1521747116042-5a810fda9664"
                   alt="New York"
@@ -148,17 +155,23 @@ const LandingPage = () => {
                 <p className="text-lg font-semibold p-4 text-gray-800">
                   New York
                 </p>
+                </a>
               </div>
+
               <div className="rounded-lg overflow-hidden shadow-lg">
+                <a href="https://www.japan-guide.com/e/e2164.html"
+                target="_blank">
                 <img
                   src="https://www.shutterstock.com/image-photo/sensojiji-temple-asakusa-tokyos-oldest-600nw-1029873808.jpg"
                   alt="Tokyo"
                   className="w-full h-48 object-cover"
                 />
                 <p className="text-lg font-semibold p-4 text-gray-800">Tokyo</p>
+                </a>
               </div>
             </div>
           </div>
+          
         </section>
 
         {/* Hero Section with Flight Search */}
@@ -252,10 +265,14 @@ const LandingPage = () => {
             >
               Search Flights
             </button>
+            <button onclick="location.href='https://rzp.io/rzp/6kGIP6Ur'" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+  Pay Now
+</button>
+
           </div>
         </div>
       </div>
-    </section>''
+    </section>
   
         {/* Features Section */}
         <section id="features" className="py-16 bg-white">
@@ -263,6 +280,7 @@ const LandingPage = () => {
             <h2 className="text-4xl font-semibold mb-8 text-blue-800">
               Why Choose Us?
             </h2>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="p-6 bg-blue-50 rounded-lg shadow-lg">
                 <h3 className="text-2xl font-semibold mb-4 text-blue-600">
@@ -273,7 +291,9 @@ const LandingPage = () => {
                   during your flight.
                 </p>
               </div>
+
               <div className="p-6 bg-blue-50 rounded-lg shadow-lg">
+                <Link to="https://www.flightaware.com/">
                 <h3 className="text-2xl font-semibold mb-4 text-blue-600">
                   Real-time Flight Tracking
                 </h3>
@@ -281,7 +301,9 @@ const LandingPage = () => {
                   Track your flight’s status, delays, and more in real-time
                   directly from our platform.
                 </p>
+                </Link>
               </div>
+
               <div className="p-6 bg-blue-50 rounded-lg shadow-lg">
                 <h3 className="text-2xl font-semibold mb-4 text-blue-600">
                   Fast Check-in
@@ -293,14 +315,17 @@ const LandingPage = () => {
               </div>
             
               <div className="p-6 bg-blue-50 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-semibold mb-4 text-blue-600">
-                  24/7 Customer Support
+              <Link to="https://gemini.google.com/app">
+              <h3 className="text-2xl font-semibold mb-4 text-blue-600">
+                  24/7 Customer Support link
                 </h3>
                 <p className="text-gray-700">
                   Our customer support team is always available to assist with
                   any queries or issues.
                 </p>
+                </Link>
               </div>
+
               <div className="p-6 bg-blue-50 rounded-lg shadow-lg">
                 <h3 className="text-2xl font-semibold mb-4 text-blue-600">
                   Flexible Booking
@@ -310,6 +335,7 @@ const LandingPage = () => {
                   your trip with ease.
                 </p>
               </div>
+              
               <div className="p-6 bg-blue-50 rounded-lg shadow-lg">
                 <h3 className="text-2xl font-semibold mb-4 text-blue-600">
                   Exclusive Deals
