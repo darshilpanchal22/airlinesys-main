@@ -63,12 +63,12 @@ const LandingPage = () => {
           {/* Login and Sign Up Buttons */}
           <div className="flex space-x-2">
             <Link to="/login">
-              <button className="text-white bg-blue-600 hover:bg-blue-700 transition duration-300 ease-in-out py-1 px-4 rounded-md shadow-sm transform hover:scale-105">
+              <button className="text-white bg-black hover:bg-blue-700 transition duration-300 ease-in-out py-1 px-4 rounded-md shadow-sm transform hover:scale-105">
                 Login
               </button>
             </Link>
             <Link to="/Signup">
-              <button className="text-white bg-blue-600 hover:bg-blue-700 transition duration-300 ease-in-out py-1 px-4 rounded-md shadow-sm transform hover:scale-105">
+              <button className="text-white bg-black hover:bg-blue-700 transition duration-300 ease-in-out py-1 px-4 rounded-md shadow-sm transform hover:scale-105">
                 Sign Up
               </button>
             </Link>
