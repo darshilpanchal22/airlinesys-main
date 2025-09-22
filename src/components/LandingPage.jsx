@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"; // ✅ Import Link
 
-
 const LandingPage = () => {
-  const [tripType, setTripType] = useState('one-way');
-  const [departure, setDeparture] = useState('');
-  const [destination, setDestination] = useState('');
-  const [departureDate, setDepartureDate] = useState('');
-  const [returnDate, setReturnDate] = useState('');
+  const [tripType, setTripType] = useState("one-way");
+  const [departure, setDeparture] = useState("");
+  const [destination, setDestination] = useState("");
+  const [departureDate, setDepartureDate] = useState("");
+  const [returnDate, setReturnDate] = useState("");
   const [passengers, setPassengers] = useState(1);
-  const [travelClass, setTravelClass] = useState('Economy');
+  const [travelClass, setTravelClass] = useState("Economy");
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const handleSearch = () => {
@@ -18,7 +17,7 @@ const LandingPage = () => {
       departure,
       destination,
       departureDate,
-      returnDate: tripType === 'round-trip' ? returnDate : null,
+      returnDate: tripType === "round-trip" ? returnDate : null,
       passengers,
       travelClass,
     });
@@ -30,52 +29,50 @@ const LandingPage = () => {
       <header className="bg-transparent fixed w-full z-10 top-0 left-0">
         <div className="container mx-auto flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="text-3xl font-bold text-black-600">
-            <span className="text-black-800">Fly</span>WithUs
+          <div className="text-3xl font-bold text-black-600 hover:text-blue-600">
+            <span className="text-black-800 ">Fly</span>WithUs
           </div>
 
           {/* Navbar Links */}
-          <nav className="hidden md:flex items-center space-x-8 text-gray-700">
+          <nav className="hidden md:flex items-center space-x-8 text-black text-[21px] shadow-2xl-gray">
             <a
               href="#features"
-              className="hover:text-blue-600 transition duration-300"
+              className="hover:text-blue-600 transition duration-300  hover:underline"
             >
               Features
             </a>
             <a
               href="#pricing"
-              className="hover:text-blue-600 transition duration-300"
+              className="hover:text-blue-600 transition duration-300  hover:underline"
             >
               Pricing
             </a>
             <a
               href="#reviews"
-              className="hover:text-blue-600 transition duration-300"
+              className="hover:text-blue-600 transition duration-300  hover:underline"
             >
               Reviews
             </a>
             <a
               href="#footer"
-              className="hover:text-blue-600 transition duration-300"
+              className="hover:text-blue-600 transition duration-300  hover:underline"
             >
               Contact
             </a>
           </nav>
-                    {/* Login and Sign Up Buttons */}
-                    <div className="flex space-x-2">
-      <Link to="/login">
-        <button className="text-white bg-blue-600 hover:bg-blue-700 transition duration-300 ease-in-out py-1 px-4 rounded-md shadow-sm transform hover:scale-105">
-          Login
-        </button>
-      </Link>
-      <Link to="/signup">
-        <button className="text-white bg-blue-600 hover:bg-blue-700 transition duration-300 ease-in-out py-1 px-4 rounded-md shadow-sm transform hover:scale-105">
-          Sign Up
-        </button>
-      </Link>
-    </div>
-
-
+          {/* Login and Sign Up Buttons */}
+          <div className="flex space-x-2">
+            <Link to="/login">
+              <button className="text-white bg-blue-600 hover:bg-blue-700 transition duration-300 ease-in-out py-1 px-4 rounded-md shadow-sm transform hover:scale-105">
+                Login
+              </button>
+            </Link>
+            <Link to="/Signup">
+              <button className="text-white bg-blue-600 hover:bg-blue-700 transition duration-300 ease-in-out py-1 px-4 rounded-md shadow-sm transform hover:scale-105">
+                Sign Up
+              </button>
+            </Link>
+          </div>
 
           {/* Mobile Menu Toggle Button */}
           <div className="md:hidden text-gray-700">
@@ -133,147 +130,166 @@ const LandingPage = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               <div className="rounded-lg overflow-hidden shadow-lg">
-                <a href="https://exploreparis.com/en" 
-                target="_blank">
-                <img
-                  src="https://travelingwolf.com/assets/images/format2x3/paris-photo-spots.jpg"
-                  alt="Paris"
-                  className="w-full h-48 object-cover"
-                />
-                <p className="text-lg font-semibold p-4 text-gray-800">Paris</p>
+                <a href="https://exploreparis.com/en" target="_blank">
+                  <img
+                    src="https://travelingwolf.com/assets/images/format2x3/paris-photo-spots.jpg"
+                    alt="Paris"
+                    className="w-full h-48 object-cover"
+                  />
+                  <p className="text-lg font-semibold p-4 text-gray-800">
+                    Paris
+                  </p>
                 </a>
               </div>
 
               <div className="rounded-lg overflow-hidden shadow-lg">
-                <a href="https://www.iloveny.com/"
-                 target="_blank">
-                <img
-                  src="https://images.unsplash.com/photo-1521747116042-5a810fda9664"
-                  alt="New York"
-                  className="w-full h-48 object-cover"
-                />
-                <p className="text-lg font-semibold p-4 text-gray-800">
-                  New York
-                </p>
+                <a href="https://www.iloveny.com/" target="_blank">
+                  <img
+                    src="https://images.unsplash.com/photo-1521747116042-5a810fda9664"
+                    alt="New York"
+                    className="w-full h-48 object-cover"
+                  />
+                  <p className="text-lg font-semibold p-4 text-gray-800">
+                    New York
+                  </p>
                 </a>
               </div>
 
               <div className="rounded-lg overflow-hidden shadow-lg">
-                <a href="https://www.japan-guide.com/e/e2164.html"
-                target="_blank">
-                <img
-                  src="https://www.shutterstock.com/image-photo/sensojiji-temple-asakusa-tokyos-oldest-600nw-1029873808.jpg"
-                  alt="Tokyo"
-                  className="w-full h-48 object-cover"
-                />
-                <p className="text-lg font-semibold p-4 text-gray-800">Tokyo</p>
+                <a
+                  href="https://www.japan-guide.com/e/e2164.html"
+                  target="_blank"
+                >
+                  <img
+                    src="https://www.shutterstock.com/image-photo/sensojiji-temple-asakusa-tokyos-oldest-600nw-1029873808.jpg"
+                    alt="Tokyo"
+                    className="w-full h-48 object-cover"
+                  />
+                  <p className="text-lg font-semibold p-4 text-gray-800">
+                    Tokyo
+                  </p>
                 </a>
               </div>
             </div>
           </div>
-          
         </section>
-
         {/* Hero Section with Flight Search */}
         <section className="bg-white-100 text-center py-12">
-      <div>
-        <h1 className="text-5xl font-bold text-blue-800 mb-4">
-          Book Your Flight Now
-        </h1>
-        <p className="text-xl mb-6 text-gray-600">
-          Find the best deals and fly with comfort and ease.
-        </p>
-        <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-xl">
-          <h2 className="text-2xl font-semibold mb-4 text-blue-600">Search Flights</h2>
-          <div className="space-y-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Trip Type</label>
-              <select
-                value={tripType}
-                onChange={(e) => setTripType(e.target.value)}
-                className="w-full p-3 mt-2 border rounded-lg"
-              >
-                <option value="one-way">One-Way</option>
-                <option value="round-trip">Round-Trip</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Departure</label>
-              <input
-                type="text"
-                value={departure}
-                onChange={(e) => setDeparture(e.target.value)}
-                className="w-full p-3 mt-2 border rounded-lg"
-                placeholder="From"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Destination</label>
-              <input
-                type="text"
-                value={destination}
-                onChange={(e) => setDestination(e.target.value)}
-                className="w-full p-3 mt-2 border rounded-lg"
-                placeholder="To"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Departure Date</label>
-              <input
-                type="date"
-                value={departureDate}
-                onChange={(e) => setDepartureDate(e.target.value)}
-                className="w-full p-3 mt-2 border rounded-lg"
-              />
-            </div>
-            {tripType === 'round-trip' && (
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Return Date</label>
-                <input
-                  type="date"
-                  value={returnDate}
-                  onChange={(e) => setReturnDate(e.target.value)}
-                  className="w-full p-3 mt-2 border rounded-lg"
-                />
+          <div>
+            <h1 className="text-5xl font-bold text-blue-800 mb-4">
+              Book Your Flight Now
+            </h1>
+            <p className="text-xl mb-6 text-gray-600">
+              Find the best deals and fly with comfort and ease.
+            </p>
+            <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-xl">
+              <h2 className="text-2xl font-semibold mb-4 text-blue-600">
+                Search Flights
+              </h2>
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Trip Type
+                  </label>
+                  <select
+                    value={tripType}
+                    onChange={(e) => setTripType(e.target.value)}
+                    className="w-full p-3 mt-2 border rounded-lg"
+                  >
+                    <option value="one-way">One-Way</option>
+                    <option value="round-trip">Round-Trip</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Departure
+                  </label>
+                  <input
+                    type="text"
+                    value={departure}
+                    onChange={(e) => setDeparture(e.target.value)}
+                    className="w-full p-3 mt-2 border rounded-lg"
+                    placeholder="From"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Destination
+                  </label>
+                  <input
+                    type="text"
+                    value={destination}
+                    onChange={(e) => setDestination(e.target.value)}
+                    className="w-full p-3 mt-2 border rounded-lg"
+                    placeholder="To"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Departure Date
+                  </label>
+                  <input
+                    type="date"
+                    value={departureDate}
+                    onChange={(e) => setDepartureDate(e.target.value)}
+                    className="w-full p-3 mt-2 border rounded-lg"
+                  />
+                </div>
+                {tripType === "round-trip" && (
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">
+                      Return Date
+                    </label>
+                    <input
+                      type="date"
+                      value={returnDate}
+                      onChange={(e) => setReturnDate(e.target.value)}
+                      className="w-full p-3 mt-2 border rounded-lg"
+                    />
+                  </div>
+                )}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Passengers
+                  </label>
+                  <input
+                    type="number"
+                    min="1"
+                    value={passengers}
+                    onChange={(e) => setPassengers(e.target.value)}
+                    className="w-full p-3 mt-2 border rounded-lg"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Class
+                  </label>
+                  <select
+                    value={travelClass}
+                    onChange={(e) => setTravelClass(e.target.value)}
+                    className="w-full p-3 mt-2 border rounded-lg"
+                  >
+                    <option value="Economy">Economy</option>
+                    <option value="Business">Business</option>
+                    <option value="First-Class">First-Class</option>
+                  </select>
+                </div>
+                <button
+                  onClick={handleSearch}
+                  className="w-full bg-blue-600 text-white py-3 mt-4 rounded-lg hover:bg-blue-700 transition duration-300"
+                >
+                  Search Flights
+                </button>
+                <button
+                  onclick="location.href='https://rzp.io/rzp/6kGIP6Ur'"
+                  class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                >
+                  Pay Now
+                </button>
               </div>
-            )}
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Passengers</label>
-              <input
-                type="number"
-                min="1"
-                value={passengers}
-                onChange={(e) => setPassengers(e.target.value)}
-                className="w-full p-3 mt-2 border rounded-lg"
-              />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Class</label>
-              <select
-                value={travelClass}
-                onChange={(e) => setTravelClass(e.target.value)}
-                className="w-full p-3 mt-2 border rounded-lg"
-              >
-                <option value="Economy">Economy</option>
-                <option value="Business">Business</option>
-                <option value="First-Class">First-Class</option>
-              </select>
-            </div>
-            <button
-              onClick={handleSearch}
-              className="w-full bg-blue-600 text-white py-3 mt-4 rounded-lg hover:bg-blue-700 transition duration-300"
-            >
-              Search Flights
-            </button>
-            <button onclick="location.href='https://rzp.io/rzp/6kGIP6Ur'" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-  Pay Now
-</button>
-
           </div>
-        </div>
-      </div>
-    </section>
-  
+        </section>
         {/* Features Section */}
         <section id="features" className="py-16 bg-white">
           <div className="container mx-auto text-center">
@@ -294,13 +310,13 @@ const LandingPage = () => {
 
               <div className="p-6 bg-blue-50 rounded-lg shadow-lg">
                 <Link to="https://www.flightaware.com/">
-                <h3 className="text-2xl font-semibold mb-4 text-blue-600">
-                  Real-time Flight Tracking
-                </h3>
-                <p className="text-gray-700">
-                  Track your flight’s status, delays, and more in real-time
-                  directly from our platform.
-                </p>
+                  <h3 className="text-2xl font-semibold mb-4 text-blue-600">
+                    Real-time Flight Tracking
+                  </h3>
+                  <p className="text-gray-700">
+                    Track your flight’s status, delays, and more in real-time
+                    directly from our platform.
+                  </p>
                 </Link>
               </div>
 
@@ -313,16 +329,16 @@ const LandingPage = () => {
                   flight.
                 </p>
               </div>
-            
+
               <div className="p-6 bg-blue-50 rounded-lg shadow-lg">
-              <Link to="https://gemini.google.com/app">
-              <h3 className="text-2xl font-semibold mb-4 text-blue-600">
-                  24/7 Customer Support link
-                </h3>
-                <p className="text-gray-700">
-                  Our customer support team is always available to assist with
-                  any queries or issues.
-                </p>
+                <Link to="https://gemini.google.com/app">
+                  <h3 className="text-2xl font-semibold mb-4 text-blue-600">
+                    24/7 Customer Support link
+                  </h3>
+                  <p className="text-gray-700">
+                    Our customer support team is always available to assist with
+                    any queries or issues.
+                  </p>
                 </Link>
               </div>
 
@@ -335,7 +351,7 @@ const LandingPage = () => {
                   your trip with ease.
                 </p>
               </div>
-              
+
               <div className="p-6 bg-blue-50 rounded-lg shadow-lg">
                 <h3 className="text-2xl font-semibold mb-4 text-blue-600">
                   Exclusive Deals
@@ -450,7 +466,7 @@ const LandingPage = () => {
                     alt="Jane Smith"
                   />
                   <div>
-                    <h3 className="text-xl font-semibold">Jane S  (USA)</h3>
+                    <h3 className="text-xl font-semibold">Jane S (USA)</h3>
                     <p className="text-sm text-gray-500">Leisure Traveler</p>
                   </div>
                 </div>
@@ -509,60 +525,109 @@ const LandingPage = () => {
         </section>
       </main>
 
-      {/* Footer Section */} 
+      {/* Footer Section */}
       <section id="footer">
+        <footer className="bg-gray-900 text-white py-10">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Logo and Company Info */}
+              <div>
+                <h2 className="text-3xl font-bold mb-4">FlyWithUs</h2>
+                <p className="mb-4">
+                  Leading the way in innovation, creativity, and customer
+                  satisfaction.
+                </p>
+                <div className="flex space-x-4">
+                  {/* Social Media Links */}
+                  <a
+                    href="https://facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-400"
+                  >
+                    <i className="fab fa-facebook-f"></i> Facebook
+                  </a>
+                  <a
+                    href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-200"
+                  >
+                    <i className="fab fa-twitter"></i> X
+                  </a>
+                  <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-pink-600 hover:text-pink-400"
+                  >
+                    <i className="fab fa-instagram"></i> Instagram
+                  </a>
+                </div>
+              </div>
 
-    <footer className="bg-gray-900 text-white py-10">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Logo and Company Info */}
-          <div>
-            <h2 className="text-3xl font-bold mb-4">FlyWithUs</h2>
-            <p className="mb-4">Leading the way in innovation, creativity, and customer satisfaction.</p>
-            <div className="flex space-x-4">
-              {/* Social Media Links */}
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-400">
-                <i className="fab fa-facebook-f"></i> Facebook
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-200">
-                <i className="fab fa-twitter"></i> X
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-400">
-                <i className="fab fa-instagram"></i> Instagram
-              </a>
+              {/* Quick Links */}
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul>
+                  <li>
+                    <a href="/about" className="hover:text-gray-400">
+                      About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/services" className="hover:text-gray-400">
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/contact" className="hover:text-gray-400">
+                      Contact
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/privacy-policy" className="hover:text-gray-400">
+                      Privacy Policy
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Contact Info */}
+              <div>
+                <h3 className="text-lg font-semibold mb-4">
+                  Contact Info-DARSHIL PANCHAL
+                </h3>
+                <ul>
+                  <li>
+                    Email:{" "}
+                    <a
+                      href="mailto:support@yourcompany.com"
+                      className="hover:text-gray-400"
+                    >
+                      airlinesys.vercel.app
+                    </a>
+                  </li>
+                  <li>
+                    Phone:{" "}
+                    <a href="tel:+1234567890" className="hover:text-gray-400">
+                      +123 456 7890
+                    </a>
+                  </li>
+                  <li>Address: 123 iskon empario, Ahmedabad, india</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-10 border-t border-gray-700 pt-6">
+              <p className="text-center text-sm text-gray-400">
+                &copy; {new Date().getFullYear()} FlyWithUs. All rights
+                reserved.
+              </p>
             </div>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul>
-              <li><a href="/about" className="hover:text-gray-400">About Us</a></li>
-              <li><a href="/services" className="hover:text-gray-400">Services</a></li>
-              <li><a href="/contact" className="hover:text-gray-400">Contact</a></li>
-              <li><a href="/privacy-policy" className="hover:text-gray-400">Privacy Policy</a></li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-            <ul>
-              <li>Email: <a href="mailto:support@yourcompany.com" className="hover:text-gray-400">flywithus.com</a></li>
-              <li>Phone: <a href="tel:+1234567890" className="hover:text-gray-400">+123 456 7890</a></li>
-              <li>Address: 123 iskon empario, Ahmedabad, india</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-10 border-t border-gray-700 pt-6">
-          <p className="text-center text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} FlyWithUs. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
-    </section>
+        </footer>
+      </section>
     </div>
   );
 };
